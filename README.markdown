@@ -8,6 +8,12 @@ A random collection of Silex providers that I've written for various uses.
 Installation
 ------------
 
+It's recommended you check out this repo as a git submodule via the following:
+
+
+        git submodule add git@github.com:joshuamorse/Silex-Providers.git vendor/Jmflava
+
+
 Register the Jmflava vendor dir in your `autoload.php` file:
 
 
