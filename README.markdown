@@ -38,16 +38,16 @@ Example Usage
 - Returning a PHP array response:
 
 
-    $app['php_array_response'](array('foo' => 'bar), 200);
+        $app['php_array_response'](array('foo' => 'bar), 200);
 
 
 - Returning a JSON response:
 
 
-    $app['json_response'](array('foo' => 'bar), 200);
+        $app['json_response'](array('foo' => 'bar), 200);
 
 
 - Returning a Jsend (http://labs.omniti.com/labs/jsend) response:
 
 
-    $app['jsend_response']('success', array('foo' => 'bar), 200);
+        $app['jsend_response']('success', array('foo' => 'bar), 200);
