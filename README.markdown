@@ -28,7 +28,15 @@ Note: make sure you're including `autoload.php` in your app file. It should look
 
 
     require_once __DIR__.'/../silex.phar'; 
-    require_once __DIR__.'/../autoload.php'; 
+    require_once __DIR__.'/../autoload.php';
+    
+
+Lastly, you'll need to register the services you'll be using in your app:
+
+
+    $app->register(new Jmflava\Provider\Service\JSON());
+    $app->register(new Jmflava\Provider\Service\Jsend());
+    $app->register(new Jmflava\Provider\Service\PHPArray());
 
 
 
