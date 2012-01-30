@@ -18,8 +18,14 @@ class JSONP implements ServiceProviderInterface
     public function register(Application $app)
     {
         $app['jsonp_response'] = $app->protect(function (array $data, $status_code = 200, $callback) use ($app) {
+            if ($callback) {
+                return new Response(
+                    sprintf('%s(%s)', $callback, json_encode($data))
+                , $status_code);
+            }
+
             return new Response(
-                sprintf('%s(%s)', $callback, json_encode($data))
+                sprintf('%s', json_encode($data))
             , $status_code);
         });
     }
